@@ -38,7 +38,7 @@ export default function Main({ navigation }) {
       </Box>
       <Box alignItems='center'>
         <Center margin={4}>
-          <Pressable onPress={() => navigation.navigate('GifticonBox')}>
+          <Pressable onPress={() => navigation.navigate('Scan')}>
             {({ isHovered, isPressed }) => {
               return (
                 <Center

@@ -9,7 +9,6 @@ import Login from './src/screen/Login';
 import Receipt from './src/screen/Receipt';
 import StockOrder from './src/screen/StockOrder';
 import React from 'react';
-import GifticonBox from './src/screen/GifticonBox';
 
 const MainTheme = {
   ...DefaultTheme,
@@ -38,7 +37,7 @@ export default function App() {
             options={{ headerShown: false }}
           />
 
-          <Stack.Screen name='GifticonBox' component={GifticonBox} />
+          <Stack.Screen name='Scan' component={Scan} />
 
           <Stack.Screen
             name='Receipt'
