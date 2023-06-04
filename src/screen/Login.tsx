@@ -11,10 +11,28 @@ import {
   HStack,
   Center,
 } from 'native-base';
-
-const SignIn = (navigation) => {};
+import { useState, useEffect } from 'react';
+import axios, { Axios } from 'axios';
+import { useDispatch } from 'react-redux';
 
 export default function Login({ navigation }) {
+  const [id, setId] = useState('');
+  const [password, setPassword] = useState('');
+
+  const logIn = () => {
+    axios
+      .post('url', {
+        userId: id,
+        userPw: password,
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
   return (
     <Center flex={1} px='3'>
       <Center w='100%'>
@@ -44,11 +62,11 @@ export default function Login({ navigation }) {
           <VStack space={3} mt='5'>
             <FormControl>
               <FormControl.Label>ID</FormControl.Label>
-              <Input />
+              <Input onChangeText={(e) => setId(e)} />
             </FormControl>
             <FormControl>
               <FormControl.Label>Password</FormControl.Label>
-              <Input type='password' />
+              <Input type='password' onChangeText={(e) => setPassword(e)} />
               <Link
                 _text={{
                   fontSize: 'xs',
@@ -72,13 +90,7 @@ export default function Login({ navigation }) {
                 비밀번호 찾기
               </Link>
             </FormControl>
-            <Button
-              mt='2'
-              colorScheme='indigo'
-              onPress={() => {
-                navigation.dispatch(StackActions.replace('Main', {}));
-              }}
-            >
+            <Button mt='2' colorScheme='indigo' onPress={logIn}>
               로그인
             </Button>
             <HStack mt='6' justifyContent='center'>
