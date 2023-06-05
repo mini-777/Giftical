@@ -21,7 +21,7 @@ export default function Login({ navigation }) {
 
   const logIn = () => {
     axios
-      .post('url', {
+      .post('/user/login', {
         userId: id,
         userPw: password,
       })
