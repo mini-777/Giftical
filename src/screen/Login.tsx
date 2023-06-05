@@ -90,7 +90,13 @@ export default function Login({ navigation }) {
                 비밀번호 찾기
               </Link>
             </FormControl>
-            <Button mt='2' colorScheme='indigo' onPress={logIn}>
+            <Button mt='2' 
+              colorScheme='indigo' 
+              onPress={()=>{
+                navigation.dispatch(StackActions.replace('Main', {}));
+              }}
+              //onPress={logIn}
+            >
               로그인
             </Button>
             <HStack mt='6' justifyContent='center'>

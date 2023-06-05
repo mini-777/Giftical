@@ -11,6 +11,7 @@ import StockOrder from "./src/screen/StockOrder";
 import React from "react";
 import GifticonBox from "./src/screen/GifticonBox";
 import GifticonView from "./src/screen/GifticonView";
+import Refund from "./src/screen/Refund";
 
 const MainTheme = {
   ...DefaultTheme,
@@ -50,6 +51,7 @@ export default function App() {
           <Stack.Screen name="StockOrder" component={StockOrder} />
 
           <Stack.Screen name="GifticonView" component={GifticonView} /> 
+          <Stack.Screen name='Refund' component={Refund} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
