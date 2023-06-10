@@ -24,7 +24,9 @@ export default function OrderInfo({ navigation, route }) {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleClick = (item) => {
-    navigation.navigate("GifticonView", {giftId: item.giftBarcode})
+    if (!item.isUsed) {
+      navigation.navigate("GifticonView", {giftId: item.giftBarcode});
+    }
     // setSelectedItem(item);
   };
 
@@ -66,6 +68,10 @@ export default function OrderInfo({ navigation, route }) {
     <Box margin={5}>
       <ScrollView style={{ height: scrollViewHeight }}>
         <VStack space={3} mt="5" divider={<Divider />}>
+          <Box>
+            <Text fontSize="xl" fontWeight="bold">주문내역</Text>
+            <Text fontSize="sm"> 결제일시 {states.purchaseDate}</Text>
+          </Box>
           {states.purchaseItems.map((item, index) => (
             <InventoryItem
               key={index}
