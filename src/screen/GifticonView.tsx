@@ -17,7 +17,7 @@ export default function GifticonView({ navigation, route }) {
 
   return (
     <Box safeArea>
-      
+      <Text>{params.giftId}</Text>
     </Box>
   )
 }

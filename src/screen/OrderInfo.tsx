@@ -12,7 +12,7 @@ import {
 } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 
-export default function Refund({ navigation, route }) {
+export default function OrderInfo({ navigation, route }) {
   const states = route.params;
 
   return (

@@ -9,9 +9,9 @@ import Login from "./src/screen/Login";
 import Receipt from "./src/screen/Receipt";
 import StockOrder from "./src/screen/StockOrder";
 import React from "react";
-import GifticonBox from "./src/screen/GifticonBox";
+import PurchaseHistories from "./src/screen/PurchaseHistories";
 import GifticonView from "./src/screen/GifticonView";
-import Refund from "./src/screen/Refund";
+import OrderInfo from "./src/screen/OrderInfo";
 
 const MainTheme = {
   ...DefaultTheme,
@@ -40,7 +40,7 @@ export default function App() {
             options={{ headerShown: false }}
           />
 
-          <Stack.Screen name="GifticonBox" component={GifticonBox} />
+          <Stack.Screen name="PurchaseHistories" component={PurchaseHistories} />
 
           <Stack.Screen
             name="Receipt"
@@ -51,7 +51,7 @@ export default function App() {
           <Stack.Screen name="StockOrder" component={StockOrder} />
 
           <Stack.Screen name="GifticonView" component={GifticonView} /> 
-          <Stack.Screen name='Refund' component={Refund} />
+          <Stack.Screen name='OrderInfo' component={OrderInfo} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
