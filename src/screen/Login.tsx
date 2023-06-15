@@ -11,9 +11,8 @@ import {
   HStack,
   Center,
 } from 'native-base';
-import { useState, useEffect } from 'react';
-import axios, { Axios } from 'axios';
-import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import axios from 'axios';
 
 export default function Login({ navigation }) {
   const [id, setId] = useState('');
@@ -21,10 +20,13 @@ export default function Login({ navigation }) {
 
   const logIn = () => {
     axios
-      .post('url', {
-        userId: id,
-        userPw: password,
-      })
+      .post(
+        'http://ec2-54-180-89-26.ap-northeast-2.compute.amazonaws.com:8080/user/login',
+        {
+          userId: id,
+          userPw: password,
+        }
+      )
       .then(function (response) {
         console.log(response);
       })
@@ -90,10 +92,12 @@ export default function Login({ navigation }) {
                 비밀번호 찾기
               </Link>
             </FormControl>
-            <Button mt='2' 
-              colorScheme='indigo' 
-              onPress={()=>{
-                navigation.dispatch(StackActions.replace('Main', {}));
+            <Button
+              mt='2'
+              colorScheme='indigo'
+              onPress={() => {
+                logIn();
+                // navigation.dispatch(StackActions.replace('Main', {}));
               }}
               //onPress={logIn}
             >
@@ -115,7 +119,7 @@ export default function Login({ navigation }) {
                   fontWeight: 'medium',
                   fontSize: 'sm',
                 }}
-                href='#'
+                onPress={() => navigation.navigate('Signup')}
               >
                 회원가입
               </Link>
