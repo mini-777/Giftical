@@ -41,28 +41,28 @@ export default function StoreView({ navigation, route }) {
   const inventoryItems = [
     {
       itemName: '카페모카빵',
-      itemPurchase: '4,000',
+      itemPurchase: '3,000',
       itemDetails: '빵류',
       itemImg:
         'https://cdn.paris.spl.li/wp-content/uploads/574784-NEW%EC%B9%B4%ED%8E%98%EB%AA%A8%EC%B9%B4%EB%B9%B5_%EC%8D%B8%EB%84%A4%EC%9D%BC1.jpg',
     },
     {
-      itemName: '소시지빵',
-      itemPurchase: '5,000',
+      itemName: '소세지 빵',
+      itemPurchase: '1,500',
       itemDetails: '빵류',
       itemImg:
         'https://cdn.paris.spl.li/wp-content/uploads/574746-%EC%B6%94%EC%96%B5%EC%9D%98-%EC%86%8C%EC%8B%9C%EC%A7%80%EB%B9%B5_%EC%8D%B8%EB%84%A4%EC%9D%BC3.jpg',
     },
     {
       itemName: '소금버터롤',
-      itemPurchase: '5,000',
+      itemPurchase: '2,000',
       itemDetails: '빵류',
       itemImg:
         'https://m.tlj.co.kr:8008/data/product/2021-12-29_event(5).JPG',
     },
     {
       itemName: '야키소바빵',
-      itemPurchase: '6,000',
+      itemPurchase: '3,000',
       itemDetails: '식품류',
       itemImg:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Yakisobapan_001.jpg/1200px-Yakisobapan_001.jpg',
