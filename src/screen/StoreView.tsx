@@ -40,32 +40,32 @@ export default function StoreView({ navigation, route }) {
 
   const inventoryItems = [
     {
-      itemName: '여리여리 봄 맞이 스커커트',
-      itemPurchase: '18,000',
-      itemDetails: '하의류',
+      itemName: '카페모카빵',
+      itemPurchase: '4,000',
+      itemDetails: '빵류',
       itemImg:
-        'https://sitem.ssgcdn.com/01/92/76/item/1000047769201_i1_1100.jpg',
+        'https://cdn.paris.spl.li/wp-content/uploads/574784-NEW%EC%B9%B4%ED%8E%98%EB%AA%A8%EC%B9%B4%EB%B9%B5_%EC%8D%B8%EB%84%A4%EC%9D%BC1.jpg',
     },
     {
-      itemName: '칼단발 머리띠',
-      itemPurchase: '12,000',
-      itemDetails: '악세사리류',
+      itemName: '소시지빵',
+      itemPurchase: '5,000',
+      itemDetails: '빵류',
       itemImg:
-        'https://img.ssfshop.com/god_god_evl/23/03/24/119166509013943.jpeg',
+        'https://cdn.paris.spl.li/wp-content/uploads/574746-%EC%B6%94%EC%96%B5%EC%9D%98-%EC%86%8C%EC%8B%9C%EC%A7%80%EB%B9%B5_%EC%8D%B8%EB%84%A4%EC%9D%BC3.jpg',
     },
     {
-      itemName: '고당도 수박',
-      itemPurchase: '18,000',
+      itemName: '소금버터롤',
+      itemPurchase: '5,000',
+      itemDetails: '빵류',
+      itemImg:
+        'https://m.tlj.co.kr:8008/data/product/2021-12-29_event(5).JPG',
+    },
+    {
+      itemName: '야키소바빵',
+      itemPurchase: '6,000',
       itemDetails: '식품류',
       itemImg:
-        'https://th4.tmon.kr/thumbs/image/16e/a26/291/2f8e88218_700x700_95_FIT.jpg',
-    },
-    {
-      itemName: '꿀참외',
-      itemPurchase: '18,000',
-      itemDetails: '식품류',
-      itemImg:
-        'https://img.wemep.co.kr/deal/9/702/4437029/c61213b08dbc6af9376ceda5a998ab18b1d64788.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Yakisobapan_001.jpg/1200px-Yakisobapan_001.jpg',
     },
   ];
 
@@ -82,7 +82,7 @@ export default function StoreView({ navigation, route }) {
         <Heading size='xl' fontWeight='600'>
           {params.storeName}
         </Heading>
-        <Text>아무거나 팝니다</Text>
+        <Text></Text>
         <Image
           source={{ uri: params.storeImg }}
           alt='storeImage'

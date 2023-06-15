@@ -48,11 +48,11 @@ const InventoryItem = ({
 export default function SearchStore({ navigation }) {
   const inventoryItems = [
     {
-      storeName: 'abcd',
-      storeImg: 'https://sitem.ssgcdn.com/01/92/76/item/1000047769201_i1_1100.jpg',
+      storeName: '대현동 기프티컬 빵집',
+      storeImg: 'https://cdn.paris.spl.li/wp-content/uploads/574746-%EC%B6%94%EC%96%B5%EC%9D%98-%EC%86%8C%EC%8B%9C%EC%A7%80%EB%B9%B5_%EC%8D%B8%EB%84%A4%EC%9D%BC3.jpg',
     },
     {
-      storeName: 'efgh',
+      storeName: '머리아는집',
       storeImg: 'https://img.ssfshop.com/god_god_evl/23/03/24/119166509013943.jpeg',
     }
   ]
