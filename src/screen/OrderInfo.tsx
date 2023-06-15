@@ -25,7 +25,7 @@ export default function OrderInfo({ navigation, route }) {
 
   const handleClick = (item) => {
     if (!item.isUsed) {
-      navigation.navigate("GifticonView", {giftId: item.giftBarcode});
+      navigation.navigate("GifticonView", item);
     }
     // setSelectedItem(item);
   };
