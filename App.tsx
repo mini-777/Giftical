@@ -13,6 +13,7 @@ import PurchaseHistories from './src/screen/PurchaseHistories';
 import GifticonView from './src/screen/GifticonView';
 import OrderInfo from './src/screen/OrderInfo';
 import Signup from './src/screen/Signup';
+import Purchase from './src/screen/Purchase';
 
 const MainTheme = {
   ...DefaultTheme,
@@ -57,7 +58,11 @@ export default function App() {
             component={Receipt}
             options={{ headerShown: false }}
           />
-
+          <Stack.Screen
+            name='Purchase'
+            component={Purchase}
+            options={{ headerShown: false }}
+          />
           <Stack.Screen name='StockOrder' component={StockOrder} />
 
           <Stack.Screen name='GifticonView' component={GifticonView} />

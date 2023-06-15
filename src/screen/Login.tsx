@@ -28,7 +28,9 @@ export default function Login({ navigation }) {
         }
       )
       .then(function (response) {
-        console.log(response);
+        navigation.dispatch(StackActions.replace('Main', {}));
+
+        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
@@ -97,9 +99,7 @@ export default function Login({ navigation }) {
               colorScheme='indigo'
               onPress={() => {
                 logIn();
-                navigation.dispatch(StackActions.replace('Main', {}));
               }}
-              //onPress={logIn}
             >
               로그인
             </Button>

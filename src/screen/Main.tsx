@@ -121,7 +121,7 @@ export default function Main({ navigation }) {
             </Pressable>
           </Center>
           <Center>
-            <Pressable onPress={() => navigation.navigate('Chat')}>
+            <Pressable onPress={() => navigation.navigate('Purchase')}>
               {({ isHovered, isPressed }) => {
                 return (
                   <Center
