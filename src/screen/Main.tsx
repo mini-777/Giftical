@@ -42,7 +42,7 @@ export default function Main({ navigation }) {
             {({ isHovered, isPressed }) => {
               return (
                 <Center
-                  h='170'
+                  h='250'
                   w='330'
                   bg={
                     isPressed
@@ -65,7 +65,7 @@ export default function Main({ navigation }) {
                   borderColor='coolGray.300'
                 >
                   <Text fontWeight='medium' textAlign='center' fontSize='3xl'>
-                    기프티콘 보관함
+                    기프티콘 구매
                   </Text>
                   <Image
                     source={{
@@ -80,92 +80,14 @@ export default function Main({ navigation }) {
             }}
           </Pressable>
         </Center>
-        <HStack margin={4} space={8} justifyContent='center'>
-          <Center>
-            <Pressable onPress={() => navigation.navigate('Stock')}>
-              {({ isHovered, isPressed }) => {
-                return (
-                  <Center
-                    alignItems='center'
-                    h='148'
-                    w='148'
-                    bg={
-                      isPressed
-                        ? 'muted.200'
-                        : isHovered
-                        ? 'muted.200'
-                        : 'muted.50'
-                    }
-                    style={{
-                      transform: [
-                        {
-                          scale: isPressed ? 0.96 : 1,
-                        },
-                      ],
-                    }}
-                    p='5'
-                    rounded='20'
-                    shadow={9}
-                    borderWidth='1'
-                    borderColor='coolGray.300'
-                    _text={{
-                      fontWeight: 'medium',
-                      textAlign: 'center',
-                      fontSize: '2xl',
-                    }}
-                  >
-                    기프티콘 구매
-                  </Center>
-                );
-              }}
-            </Pressable>
-          </Center>
-          <Center>
-            <Pressable onPress={() => navigation.navigate('Stock')}>
-              {({ isHovered, isPressed }) => {
-                return (
-                  <Center
-                    h='148'
-                    w='148'
-                    bg={
-                      isPressed
-                        ? 'muted.200'
-                        : isHovered
-                        ? 'muted.200'
-                        : 'muted.50'
-                    }
-                    _text={{
-                      fontWeight: 'medium',
-                      textAlign: 'center',
-                      fontSize: '2xl',
-                    }}
-                    style={{
-                      transform: [
-                        {
-                          scale: isPressed ? 0.96 : 1,
-                        },
-                      ],
-                    }}
-                    p='5'
-                    rounded='20'
-                    shadow={9}
-                    borderWidth='1'
-                    borderColor='coolGray.300'
-                  >
-                    기프티콘 선물
-                  </Center>
-                );
-              }}
-            </Pressable>
-          </Center>
-        </HStack>
+
         <HStack margin={4} space={8} justifyContent='center'>
           <Center>
             <Pressable onPress={() => navigation.navigate('StockOrder')}>
               {({ isHovered, isPressed }) => {
                 return (
                   <Center
-                    h='148'
+                    h='230'
                     w='148'
                     bg={
                       isPressed
@@ -203,7 +125,7 @@ export default function Main({ navigation }) {
               {({ isHovered, isPressed }) => {
                 return (
                   <Center
-                    h='148'
+                    h='230'
                     w='148'
                     bg={
                       isPressed
