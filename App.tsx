@@ -67,7 +67,11 @@ export default function App() {
           />
           <Stack.Screen name='StockOrder' component={StockOrder} />
 
-          <Stack.Screen name='GifticonView' component={GifticonView} />
+          <Stack.Screen
+            name='GifticonView'
+            component={GifticonView}
+            options={{ headerShown: false }}
+          />
           <Stack.Screen name='OrderInfo' component={OrderInfo} />
 
           <Stack.Screen name='SearchStore' component={SearchStore} />

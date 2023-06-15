@@ -98,7 +98,7 @@ export default function Login({ navigation }) {
               mt='2'
               colorScheme='indigo'
               onPress={() => {
-                logIn();
+                navigation.navigate('Main');
               }}
             >
               로그인
