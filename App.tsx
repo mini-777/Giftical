@@ -12,7 +12,8 @@ import React from "react";
 import PurchaseHistories from "./src/screen/PurchaseHistories";
 import GifticonView from "./src/screen/GifticonView";
 import OrderInfo from "./src/screen/OrderInfo";
-import SeachStore from "./src/screen/SearchStore";
+import SearchStore from "./src/screen/SearchStore";
+import StoreView from "./src/screen/StoreView";
 
 const MainTheme = {
   ...DefaultTheme,
@@ -54,7 +55,8 @@ export default function App() {
           <Stack.Screen name="GifticonView" component={GifticonView} /> 
           <Stack.Screen name='OrderInfo' component={OrderInfo} />
 
-          <Stack.Screen name='SearchStore' component={SeachStore} />
+          <Stack.Screen name='SearchStore' component={SearchStore} />
+          <Stack.Screen name='StoreView' component={StoreView} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
