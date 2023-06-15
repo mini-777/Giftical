@@ -21,10 +21,13 @@ export default function Login({ navigation }) {
 
   const logIn = () => {
     axios
-      .post('url', {
-        userId: id,
-        userPw: password,
-      })
+      .post(
+        'ec2-13-209-87-216.ap-northeast-2.compute.amazonaws.com:8080/user/login',
+        {
+          userId: id,
+          userPw: password,
+        }
+      )
       .then(function (response) {
         console.log(response);
       })
@@ -90,9 +93,11 @@ export default function Login({ navigation }) {
                 비밀번호 찾기
               </Link>
             </FormControl>
-            <Button mt='2' 
-              colorScheme='indigo' 
-              onPress={()=>{
+            <Button
+              mt='2'
+              colorScheme='indigo'
+              onPress={() => {
+                logIn();
                 navigation.dispatch(StackActions.replace('Main', {}));
               }}
               //onPress={logIn}
