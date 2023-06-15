@@ -8,6 +8,7 @@ import {
   Image,
   Input,
   Icon,
+  VStack,
 } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 import { ImageSlider } from "react-native-image-slider-banner";
@@ -17,7 +18,11 @@ export default function GifticonView({ navigation, route }) {
 
   return (
     <Box safeArea>
-      <Text>{params.giftId}</Text>
+      <VStack>
+        <Box>
+          <Text fontSize="xl" fontWeight="bold">기프티콘 이름</Text>
+        </Box>
+      </VStack>
     </Box>
   )
 }
