@@ -89,7 +89,9 @@ export default function StoreView({ navigation, route }) {
           mt="2"
         />
         <Divider mt="3" />
-
+        <Heading size="lg" mt="5">
+          상품 목록
+        </Heading>
         <VStack space={3} mt="5" divider={<Divider />}>
           {inventoryItems.map((item, index) => (
             <InventoryItem
