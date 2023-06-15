@@ -17,11 +17,20 @@ export default function GifticonView({ navigation, route }) {
   const params = route.params;
 
   return (
-    <Box safeArea>
+    <Box margin={5}>
       <VStack>
-        <Box>
-          <Text fontSize="xl" fontWeight="bold">기프티콘 이름</Text>
-        </Box>
+        <Heading size="lg">
+          {params.giftName}
+        </Heading>
+        <Image 
+          source={{
+            uri: params.giftImg
+          }}
+          alt="giftImage"
+          w="full"
+          h="70%"
+          mt="3"
+        />
       </VStack>
     </Box>
   )
