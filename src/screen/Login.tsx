@@ -97,7 +97,7 @@ export default function Login({ navigation }) {
               colorScheme='indigo'
               onPress={() => {
                 logIn();
-                // navigation.dispatch(StackActions.replace('Main', {}));
+                navigation.dispatch(StackActions.replace('Main', {}));
               }}
               //onPress={logIn}
             >

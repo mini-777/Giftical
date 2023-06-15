@@ -81,7 +81,7 @@ export default function Main({ navigation }) {
           </Pressable>
         </Center>
 
-        <HStack margin={4} space={8} justifyContent='center'>
+        <HStack margin={4} mb={8} space={8} justifyContent='center'>
           <Center>
             <Pressable onPress={() => navigation.navigate('StockOrder')}>
               {({ isHovered, isPressed }) => {
