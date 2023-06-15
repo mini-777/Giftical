@@ -1,4 +1,4 @@
-import { NativeBaseProvider } from "native-base";
+import { NativeBaseProvider, SearchIcon } from "native-base";
 
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -12,6 +12,7 @@ import React from "react";
 import PurchaseHistories from "./src/screen/PurchaseHistories";
 import GifticonView from "./src/screen/GifticonView";
 import OrderInfo from "./src/screen/OrderInfo";
+import SeachStore from "./src/screen/SearchStore";
 
 const MainTheme = {
   ...DefaultTheme,
@@ -52,6 +53,8 @@ export default function App() {
 
           <Stack.Screen name="GifticonView" component={GifticonView} /> 
           <Stack.Screen name='OrderInfo' component={OrderInfo} />
+
+          <Stack.Screen name='SearchStore' component={SeachStore} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
