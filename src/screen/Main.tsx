@@ -38,7 +38,7 @@ export default function Main({ navigation }) {
       </Box>
       <Box alignItems='center'>
         <Center margin={4}>
-          <Pressable onPress={() => navigation.navigate('PurchaseHistories')}>
+          <Pressable onPress={() => navigation.navigate('SearchStore')}>
             {({ isHovered, isPressed }) => {
               return (
                 <Center
@@ -83,7 +83,7 @@ export default function Main({ navigation }) {
 
         <HStack margin={4} mb={8} space={8} justifyContent='center'>
           <Center>
-            <Pressable onPress={() => navigation.navigate('StockOrder')}>
+            <Pressable onPress={() => navigation.navigate('PurchaseHistories')}>
               {({ isHovered, isPressed }) => {
                 return (
                   <Center
@@ -121,7 +121,7 @@ export default function Main({ navigation }) {
             </Pressable>
           </Center>
           <Center>
-            <Pressable onPress={() => navigation.navigate('Purchase')}>
+            <Pressable onPress={() => navigation.navigate('StockOrder')}>
               {({ isHovered, isPressed }) => {
                 return (
                   <Center

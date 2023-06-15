@@ -21,7 +21,11 @@ export default function Login({ navigation }) {
   const logIn = () => {
     axios
       .post(
+<<<<<<< HEAD
         'http://ec2-54-180-89-26.ap-northeast-2.compute.amazonaws.com:8080/user/login',
+=======
+        'ec2-13-209-87-216.ap-northeast-2.compute.amazonaws.com:8080/user/login',
+>>>>>>> 24cc1539ff37e54a46e2e836e6f86cc82fe1f450
         {
           userId: id,
           userPw: password,
@@ -99,6 +103,10 @@ export default function Login({ navigation }) {
               colorScheme='indigo'
               onPress={() => {
                 logIn();
+<<<<<<< HEAD
+=======
+                navigation.dispatch(StackActions.replace('Main', {}));
+>>>>>>> 24cc1539ff37e54a46e2e836e6f86cc82fe1f450
               }}
             >
               로그인

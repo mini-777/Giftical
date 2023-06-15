@@ -11,6 +11,7 @@ import {
   VStack,
   HStack,
   Divider,
+  Heading,
 } from "native-base";
 import { TabView, TabBar, SceneMap } from "react-native-tab-view";
 
@@ -82,22 +83,39 @@ export default function PurchaseHistories( {navigation} ) {
       style={{ opacity: isRefunded ? 0.5 : 1 }}
       onPress={onItemClick}
     >
-      <HStack space={3} alignItems="center">
+      <HStack 
+        space={3} 
+        alignItems="center"
+        justifyContent="space-between"
+      >
         <VStack>
-          <Text fontWeight="bold">{purchaseDate}</Text>
+          <Text fontSize="lg" fontWeight="bold">{purchaseDate}</Text>
           <Text fontSize="sm">
             {purchaseItems[0].giftName +
               (purchaseItems.length > 0 && ` 외 ${purchaseItems.length - 1}개`)}
           </Text>
         </VStack>
+        <Image 
+          source={{
+            uri: purchaseItems[0].giftImg
+          }}
+          alt="gifiImage"
+          w='20'
+          h='20'
+          rounded='md'
+        />
+
       </HStack>
     </TouchableOpacity>
   );
 
   return (
     <Box margin={5}>
+      <Heading size='xl' mt='3'>
+        결제 내역
+      </Heading>
       <ScrollView style={{ height: scrollViewHeight }}>
-        <VStack space={3} mt="5" divider={<Divider />}>
+        <VStack space={3} mt="3" divider={<Divider />}>
           {inventoryItems.map((item, index) => (
             <InventoryItem
               key={index}
