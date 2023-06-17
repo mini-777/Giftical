@@ -45,7 +45,6 @@ export default function GifticonView({ navigation, route }) {
         소시지 빵
       </Heading>
       <Heading size='lg'>대현동 기프티컬 빵집</Heading>
-
       <Center>
         <VStack alignItems={'center'}>
           <Image
